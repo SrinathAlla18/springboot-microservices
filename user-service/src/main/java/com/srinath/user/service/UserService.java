@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+
 @Service
 @Slf4j
 public class UserService {
@@ -32,5 +34,11 @@ public class UserService {
         vo.setUser(user);
         vo.setDepartment(department);
         return vo;
+    }
+
+    public List<User> getUserWithFirstName(String firstName){
+        log.info("Inside getUserWithFirstName of UserService");
+        return userRepository.findByFirstName(firstName);
+        
     }
 }

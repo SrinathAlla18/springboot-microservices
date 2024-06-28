@@ -8,7 +8,6 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "users") // Use a different table name that is not a reserved keyword
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
